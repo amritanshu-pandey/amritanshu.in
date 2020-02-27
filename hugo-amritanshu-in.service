@@ -4,7 +4,7 @@ Description=Hugo based website (amritanshu.in)
 [Service]
 User=serveruser
 WorkingDirectory=/srv/applications/hugo-amritanshu-in/
-ExecStart=/usr/local/bin/hugo server --bind 0.0.0.0 --baseURL='https://www.amritanshu.in' --appendPort=false
+ExecStart=/usr/local/bin/hugo server --bind 0.0.0.0 --baseURL='https://blog.amritanshu.in' --appendPort=false
 NoNewPrivileges=yes
 PrivateTmp=yes
 PrivateDevices=yes
