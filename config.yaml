@@ -1,6 +1,5 @@
 ---
-baseURL: "https://www.amritanshu.in/"
-appendPort: false
+baseURL: "https://amritanshu.in/"
 languageCode: "en-us"
 title: "Amritanshu Pandey"
 theme: "hugo-kiera"
