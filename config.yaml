@@ -13,6 +13,6 @@ author:
     stackoverflow: "users/2329689/amritanshu-pandey"  #StackOverflow username
 
 params:
-    tagline: "Amritanshu's blog"
+    tagline: "Linux, Python, OSS, Devops"
     customCSS: []  #Optional Customised CSS
     favicon: "https://avatars3.githubusercontent.com/u/5570314"
