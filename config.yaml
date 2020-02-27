@@ -1,0 +1,18 @@
+---
+baseURL: "https://www.amritanshu.in/"
+appendPort: false
+languageCode: "en-us"
+title: "Amritanshu Pandey"
+theme: "hugo-kiera"
+pygmentsCodeFences: true
+
+author:
+    name: "Amritanshu Pandey"           #Author name
+    github: "https://github.com/amritanshu-pandey"         #Github username
+    linkedin: "https://www.linkedin.com/in/amritanshupandey"       #LinkedIn username
+    twitter: "https://twitter.com/iamritanshu"        #Twitter username
+    stackoverflow: "https://stackoverflow.com/users/2329689/amritanshu-pandey"  #StackOverflow username
+
+params:
+    tagline: "Amritanshu's blog"
+    customCSS: []  #Optional Customised CSS
