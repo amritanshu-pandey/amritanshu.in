@@ -1,4 +1,5 @@
-baseURL = "https://www.amritanshu.in/"
+baseUrl = "https://www.amritanshu.in/"
+appendPort = false
 languageCode = "en-us"
 title = "Amritanshu Pandey"
 theme = "hugo-kiera"
