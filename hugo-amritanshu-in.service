@@ -1,0 +1,23 @@
+[Unit]
+Description=Hugo based website (amritanshu.in)
+
+[Service]
+User=serveruser
+WorkingDirectory=/srv/applications/hugo-amritanshu-in/
+ExecStart=/usr/local/bin/hugo server -D --bind 0.0.0.0
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectControlGroups=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+RestrictNamespaces=yes
+RestrictRealtime=yes
+MemoryDenyWriteExecute=yes
+LockPersonality=yes
+
+[Install]
+WantedBy=multi-user.target
