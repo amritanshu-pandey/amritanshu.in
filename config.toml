@@ -1,0 +1,4 @@
+baseURL = "www.amritanshu.in/"
+languageCode = "en-us"
+title = "Amritanshu Pandey"
+theme = "hugo-kiera"
