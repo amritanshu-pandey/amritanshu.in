@@ -85,4 +85,12 @@ $ journalctl -u <servicename> -n 2 -o json
 
  Notable supported formats: json, json-pretty, short, short-iso, verbose
 
+- To display the amount of disk used by journald logs
+
+```bash
+$ journalctl --disk-usage
+
+Archived and active journals take up 24.0M in the file system.
+```
+
 A detailed reference guide for the journalctl cli can be found here - https://www.freedesktop.org/software/systemd/man/journalctl.html
