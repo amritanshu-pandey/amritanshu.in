@@ -1,0 +1,12 @@
+[Unit]
+Description=Refresh Hugo based website (amritanshu.in)
+
+[Service]
+User=serveruser
+WorkingDirectory=/srv/applications/hugo-amritanshu-in/
+ExecStart=git fetch && git rebase
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
