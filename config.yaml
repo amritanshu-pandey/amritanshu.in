@@ -15,3 +15,4 @@ author:
 params:
     tagline: "Amritanshu's blog"
     customCSS: []  #Optional Customised CSS
+    favicon: "https://avatars3.githubusercontent.com/u/5570314"
