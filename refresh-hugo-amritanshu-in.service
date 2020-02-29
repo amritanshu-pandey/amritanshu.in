@@ -4,7 +4,7 @@ Description=Refresh Hugo based website (amritanshu.in)
 [Service]
 User=serveruser
 WorkingDirectory=/srv/applications/hugo-amritanshu-in/
-ExecStart=git fetch && git rebase
+ExecStart=/bin/bash -c "git fetch && git rebase"
 NoNewPrivileges=yes
 PrivateTmp=yes
 
