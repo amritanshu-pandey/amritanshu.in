@@ -12,6 +12,7 @@ I currently live in Sydney and work as a Release engineer at my day job. By the 
 
 I intend to write about my various tech related experiences and new learnings on this blog.
 
-I could be reached out through github or twitter, links to those are available on my landing page i.e https://blog.amritanshu.in. Alternatively just shoot me an email on email@amritanshu.in.
+I could be reached out through github or twitter, links to those are available on my landing page i.e https://blog.amritanshu.in. 
+Alternatively just shoot me an email on email@amritanshu.in.
 
 Thanks for stopping by!
