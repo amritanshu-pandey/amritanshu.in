@@ -1,5 +1,4 @@
-AMRITANSHU.IN
-=============
+# AMRITANSHU.IN [![Netlify Status](https://api.netlify.com/api/v1/badges/a2854d86-c2f5-4bfd-9c4f-99e771a6430f/deploy-status)](https://app.netlify.com/sites/amritanshu/deploys)
 
 # How to deploy
 
