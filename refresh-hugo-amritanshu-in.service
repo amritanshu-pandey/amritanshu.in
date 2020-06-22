@@ -2,7 +2,7 @@
 Description=Refresh Hugo based website (amritanshu.in)
 
 [Service]
-User=serveruser
+User=amritanshu
 WorkingDirectory=/srv/applications/hugo-amritanshu-in/
 ExecStart=/bin/bash -c "git fetch && git rebase"
 NoNewPrivileges=yes

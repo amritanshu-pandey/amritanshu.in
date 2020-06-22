@@ -2,9 +2,9 @@
 Description=Hugo based website (amritanshu.in)
 
 [Service]
-User=serveruser
+User=amritanshu
 WorkingDirectory=/srv/applications/hugo-amritanshu-in/
-ExecStart=/usr/local/bin/hugo server --bind 0.0.0.0 --baseURL='https://blog.amritanshu.in' --appendPort=false
+ExecStart=hugo server --bind 172.17.0.1 --baseURL='https://blog.amritanshu.in' --appendPort=false --port 1313
 NoNewPrivileges=yes
 PrivateTmp=yes
 PrivateDevices=yes
