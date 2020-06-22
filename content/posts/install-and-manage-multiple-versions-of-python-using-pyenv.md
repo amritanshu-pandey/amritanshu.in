@@ -6,4 +6,4 @@ categories: ['python']
 tags: ['python', 'pyenv']
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JyimhcbZ-8w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube JyimhcbZ-8w >}}
