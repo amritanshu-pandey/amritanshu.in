@@ -6,6 +6,7 @@ theme: "hugo-kiera"
 pygmentsCodeFences: true
 summaryLength: 30
 enableEmoji: true
+disqusShortname: amritanshu-in
 
 author:
     name: "Amritanshu Pandey"           #Author name
