@@ -31,5 +31,3 @@ blog posts in this series.
 
 More posts in this series:
 1. Coming soon
-
-{{ template "_internal/disqus.html" . }}
