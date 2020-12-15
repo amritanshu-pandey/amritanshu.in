@@ -1,6 +1,7 @@
 ---
 title: "My introduction to Kubernetes"
 date: 2020-07-01T08:00:00+11:00
+expirydate: 2020-07-01T08:00:00+11:00
 draft: true
 categories: ['kubernetes']
 tags: ['kubernetes']
