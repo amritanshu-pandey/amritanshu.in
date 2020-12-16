@@ -1,7 +1,7 @@
 ---
 title: "How to trigger Gitlab pipelines using REST API"
 date: 2020-12-16T21:24:00+11:00
-draft: true
+draft: false
 categories: ['gitlab']
 tags: ['gitlab']
 ---
