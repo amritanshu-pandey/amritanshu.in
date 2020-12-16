@@ -6,16 +6,16 @@ categories: ['gitlab']
 tags: ['gitlab']
 ---
 
-Gitlab pipelines are the CI(Continuous Integration) build job(s), that are usually triggered when a new commit is pushed to the git repository. Pipelines can be used to test, compile and deploy the code or to automate certain tasks. In addition to changes in git repositories, pipelines can also be triggered through other mechanisms as well. For instance:
+Gitlab pipelines are the CI(Continuous Integration) build job(s), that are usually triggered when a new commit is pushed to a git repository. Pipelines can be used to test, compile and deploy the code or to automate certain tasks. In addition to changes in git repositories, pipelines can also be triggered through other mechanisms as well. For instance:
 
-1. Manually through the Gitlab UI
+1. Manually through the GitLab UI
 1. Based on a schedule
-1. Using gitlab's REST API
+1. Using GitLab's REST API
 
-In this article, I will explain how to trigger a Gitlab pipeline using the Gitlab's REST API.
+In this article, I will explain how to trigger a GitLab pipeline using the GitLab's REST API.
 
 ## Create pipeline trigger
-1. Navigate to project settings -> CI/CD -> Pipeline triggers
+1. Navigate to `project settings -> CI/CD -> Pipeline triggers`
 1. Create a new trigger and make note of the token. Token is used to authenticate the REST calls to trigger the pipeline.
 ![Gitlab Pipeline Triggers](/static/static/gitlab-pipeline-triggers.png)
 1. Also make note of the URL displayed in the same page that must be used to trigger the pipeline. For e.g. `https://git.xps.lan/api/v4/projects/14/trigger/pipeline`
@@ -31,9 +31,9 @@ curl -X POST \
      https://git.xps.lan/api/v4/projects/14/trigger/pipeline
 ```
 
-Sometime it might be required to pass on some variables to the pipeline while triggering the same. THe variables passed while triggering the pipeline are avilable as environment variables at run time and takes precedence over all other variables.
+Sometime it might be required to pass on some variables to the pipeline while triggering the same. The variables passed while triggering the pipeline are available as environment variables at run time and takes precedence over all other variables.
 
-Following command will provide a variable names `RUN_NIGHTLY_BUILD` with value as `true` to the pipeline. Any number of variables can be provided like this.
+Following command will provide a variable named `RUN_NIGHTLY_BUILD` with value as `true` to the pipeline. Any number of variables can be provided like this.
 
 ```bash
 curl -X POST \
