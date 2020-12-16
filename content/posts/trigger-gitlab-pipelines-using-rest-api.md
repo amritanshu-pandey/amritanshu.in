@@ -50,5 +50,5 @@ For the users on Windows, it might be bit easier to use Powershell and Invoke-We
 ```powershell
 Invoke-WebRequest https://git.xps.lan/api/v4/projects/14/trigger/pipeline `
     -Method POST `
-    -Body @{"token"="17c75309e60a20d1884cd4d73be1bd"; "ref"="master"; "variables[RUN_NIGHTLY_BUILD]"="true"}
+    -Body @{"token"="<token-noted-in-previous-step>"; "ref"="<ref-name-like-branch-or-tag>"; "variables[RUN_NIGHTLY_BUILD]"="true"}
 ```
