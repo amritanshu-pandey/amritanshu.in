@@ -36,4 +36,5 @@ d----          16/12/2020  9:12 PM                themes
 -a---          16/12/2020  9:12 PM            710 README.md  
 ```
 
-`ls` is an alias to the powershell command `Get-ChildItem`. what we see on screen is just a textual representation, but behind the scenes is an object. We can see the properties and method pertaining to the object using the `Get-Members` cmdlet.
+`ls` is an alias to the powershell command `Get-ChildItem`. what we see on screen is just a textual representation, but behind the scenes it is an object. We can see the properties and method pertaining to the object using the `Get-Members` cmdlet (`Get-ChildItem | Get-Member`)
+
