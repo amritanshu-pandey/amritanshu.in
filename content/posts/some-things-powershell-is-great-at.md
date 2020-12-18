@@ -6,7 +6,7 @@ categories: ['powershell']
 tags: ['powershell', 'json', 'cli']
 ---
 
-Powershell is an Object based shell and scripting language. It is different from majority of shells as instead of accepting and returning text, commands in Powershell accept and return objects. Each object has a textual representation that you see as output by default, but behind the scene each output is an object that contains plethora of information (properties) and possible actions (methods). When two Powershell commands are piped, its not the text that is passed from first command to second, instead it is objects that are passed, hence the second command has a lot of properties and methods available to them.
+Powershell is an Object based shell and scripting language. It is different from majority of other shells as instead of accepting and returning text, commands in Powershell accept and return objects. Each object has a textual representation that you see as output by default, but behind the scene, each output is an object that contains plethora of information (properties) and possible actions (methods). When two Powershell commands are piped, its not the text that is passed from first command to second, instead it is objects that are passed, hence the second command has a lot of properties and methods available to them.
 
 Owing to the Object oriented nature of Powershell, it is similar to Python and its REPL, but being a shell, Powershell has tight integration with OS including the filesystem, executables, services etc.
 
