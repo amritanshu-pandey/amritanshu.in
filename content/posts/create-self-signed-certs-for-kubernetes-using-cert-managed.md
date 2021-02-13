@@ -1,5 +1,5 @@
 ---
-title: “Create self signed certificates for Kubernetes using cert-manager”
+title: Create self signed certificates for Kubernetes using cert-manager
 date: 2021-02-14T08:04:23+11:00
 draft: false
 categories: [‘kubernetes’]
