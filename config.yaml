@@ -27,7 +27,7 @@ markup:
     lineNos: false
     lineNumbersInTable: true
     noClasses: true
-    tabWidth: 2
+    tabWidth: 4
 
 privacy:
   disqus:
