@@ -8,7 +8,7 @@ meta: "false"
 
 I am a Python developer with deep interest in creating CI/CD and other Devops tooling.
 
-I currently live in Sydney and work as a Release engineer at my day job. By the evening and on weekends I could mostly be found either working on my various side projects or tinkering with my home lab or cloud with view of honing my devops skills.
+I currently live in Sydney and work as a Devops engineer at my day job. By the evening and on weekends I could mostly be found either working on my various side projects or tinkering with my home lab or cloud with view of honing my devops skills.
 
 I intend to write about my various tech related experiences and new learnings on this blog.
 

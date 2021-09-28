@@ -21,7 +21,3 @@ $ kubectl apply -f *.yaml
 {{< gist amritanshu-pandey 8ab00179c98720cbc28d8bb0c7064426 "rbac.yaml" >}}
 
 {{< gist amritanshu-pandey 8ab00179c98720cbc28d8bb0c7064426 "storage-class.yaml" >}}
-
----
-
-
