@@ -3,5 +3,8 @@ package main
 import "amritanshu.in/goblog/backend"
 
 func main() {
-	backend.RunServer()
+	config := Config{}
+	config.Init()
+
+	backend.RunServer(config.MarkdownDir, config.Server.Port, config.Server.BindAddr)
 }

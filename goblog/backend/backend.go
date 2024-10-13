@@ -1,6 +1,7 @@
 package backend
 
 import (
+	"fmt"
 	"net/http"
 
 	"amritanshu.in/goblog/md"
@@ -8,17 +9,17 @@ import (
 	"github.com/a-h/templ"
 )
 
-func RunServer() error {
-	posts, err := md.Posts()
+func RunServer(markdownPath string, serverPort int, serverBindAddr string) error {
+	markdownPosts, err := md.Posts(markdownPath)
 	if err != nil {
 		return err
 	}
-	http.Handle("/", templ.Handler(views.Index(posts)))
-	http.Handle("/article/", templ.Handler(views.Index(posts)))
+	http.Handle("/", templ.Handler(views.Index(markdownPosts)))
+	http.Handle("/article/", templ.Handler(views.Index(markdownPosts)))
 	http.HandleFunc("/article/{slug}", func(w http.ResponseWriter, r *http.Request) {
 		slug := r.PathValue("slug")
-		views.Article(posts[slug]).Render(r.Context(), w)
+		views.Article(markdownPosts[slug]).Render(r.Context(), w)
 	})
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(fmt.Sprintf("%s:%d", serverBindAddr, serverPort), nil)
 	return nil
 }

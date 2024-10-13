@@ -1,14 +1,14 @@
 package md
 
 import (
-	"embed"
+	"fmt"
+	"io/fs"
+	"os"
+
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/html"
 	"github.com/gomarkdown/markdown/parser"
 )
-
-//go:embed *.md
-var source embed.FS
 
 type Post struct {
 	FileName string
@@ -28,8 +28,9 @@ func mdToHTML(md []byte) []byte {
 	return markdown.Render(doc, renderer)
 }
 
-func Posts() (map[string]Post, error) {
-	dirEntries, err := source.ReadDir(".")
+func Posts(path string) (map[string]Post, error) {
+	source := os.DirFS(path)
+	dirEntries, err := fs.Glob(source, "*.md")
 	if err != nil {
 		return nil, err
 	} 
@@ -37,14 +38,15 @@ func Posts() (map[string]Post, error) {
 	posts := make(map[string]Post)
 
 	for _, p := range dirEntries {
-		body, _ := source.ReadFile(p.Name())
-		post := Post{
-			FileName: p.Name(),
+		mdPath := fmt.Sprintf("%s/%s", path, p)
+		body, _ := os.ReadFile(mdPath)
+		post := Post {
+			FileName: p,
 			BodyHTML: mdToHTML(body),
 			BodyRaw: body,
 		}
 
-		posts[p.Name()] = post
+		posts[p] = post
 	}
 
 	return posts, nil
