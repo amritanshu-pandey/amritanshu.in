@@ -1,0 +1,11 @@
+package views
+
+import (
+	"amritanshu.in/goblog/md"
+)
+
+templ Article(post md.Post) {
+	@Base() {
+		@templ.Raw(string(post.BodyHTML))
+	}
+}
