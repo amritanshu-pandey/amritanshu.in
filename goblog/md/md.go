@@ -116,7 +116,6 @@ func Posts(path string) (map[string]Post, error) {
 			BodyHTML: mdToHTML([]byte(bodyRaw)),
 			Metadata: metadataParsed,
 		}
-		fmt.Println(post.FileName)
 
 		posts[fileName] = post
 	}

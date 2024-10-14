@@ -16,6 +16,14 @@ templ Index(posts map[string]md.Post, sortedTitles []md.Kv) {
 					<td>
 						{ t.Value.Metadata.Date.Format("Jan 02, 2006") }
 					</td>
+					<td>
+						for i, tag := range t.Value.Metadata.Tags {
+							#{ tag }
+							if i < len(t.Value.Metadata.Tags) - 1 {
+								, 
+							}
+						}
+					</td>
 				</tr>
 			}
 		</table>
