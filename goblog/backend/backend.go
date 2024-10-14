@@ -10,12 +10,16 @@ import (
 )
 
 func RunServer(markdownPath string, serverPort int, serverBindAddr string) error {
-	markdownPosts, err := md.Posts(markdownPath)
+	markdownPosts, err := md.ActivePosts(markdownPath)
 	if err != nil {
 		return err
 	}
-	http.Handle("/", templ.Handler(views.Index(markdownPosts)))
-	http.Handle("/article/", templ.Handler(views.Index(markdownPosts)))
+	sortedTitles, err := md.SortedPostsByDate(markdownPath)
+	if err != nil {
+		return err
+	}
+
+	http.Handle("/", templ.Handler(views.Index(markdownPosts, sortedTitles)))
 	http.HandleFunc("/article/{slug}", func(w http.ResponseWriter, r *http.Request) {
 		slug := r.PathValue("slug")
 		views.Article(markdownPosts[slug]).Render(r.Context(), w)

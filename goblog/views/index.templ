@@ -1,15 +1,23 @@
 package views
 
 import (
-    "amritanshu.in/goblog/md"
-    "fmt"
+	"amritanshu.in/goblog/md"
+	"fmt"
 )
 
-templ Index(posts map[string]md.Post) {
-    @Base() {
-        <h3>All posts:</h3>
-        for p := range posts {
-            <l1><a href={templ.SafeURL(fmt.Sprintf("/article/%s", p))}>{p}</a></l1><br>
-        }
-    }
+templ Index(posts map[string]md.Post, sortedTitles []md.Kv) {
+	@Base() {
+		<table>
+			for _, t := range sortedTitles {
+				<tr>
+					<td>
+						<a href={ templ.SafeURL(fmt.Sprintf("/article/%s", t.Value.FileName)) } class="secondary">{ t.Value.Metadata.Title }</a>
+					</td>
+					<td>
+						{ t.Value.Metadata.Date.Format("Jan 02, 2006") }
+					</td>
+				</tr>
+			}
+		</table>
+	}
 }

@@ -6,6 +6,7 @@ import (
 
 templ Article(post md.Post) {
 	@Base() {
+		<h1>{ post.Metadata.Title }</h1>
 		@templ.Raw(string(post.BodyHTML))
 	}
 }
