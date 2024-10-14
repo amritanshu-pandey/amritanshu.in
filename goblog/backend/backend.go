@@ -9,7 +9,7 @@ import (
 	"github.com/a-h/templ"
 )
 
-func RunServer(markdownPath string, serverPort int, serverBindAddr string) error {
+func RunServer(markdownPath string, assetsDir string, serverPort int, serverBindAddr string) error {
 	markdownPosts, err := md.ActivePosts(markdownPath)
 	if err != nil {
 		return err
@@ -19,7 +19,11 @@ func RunServer(markdownPath string, serverPort int, serverBindAddr string) error
 		return err
 	}
 
+	staticFs := http.FileServer(http.Dir(assetsDir))
+
 	http.Handle("/", templ.Handler(views.Index(markdownPosts, sortedTitles)))
+	fmt.Println(assetsDir)
+	http.Handle("/assets/", http.StripPrefix("/assets/", staticFs))
 	http.HandleFunc("/article/{slug}", func(w http.ResponseWriter, r *http.Request) {
 		slug := r.PathValue("slug")
 		views.Article(markdownPosts[slug]).Render(r.Context(), w)

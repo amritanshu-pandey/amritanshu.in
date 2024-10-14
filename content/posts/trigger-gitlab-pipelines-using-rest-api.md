@@ -17,7 +17,7 @@ In this article, I will explain how to trigger a GitLab pipeline using the GitLa
 ## Create pipeline trigger
 1. Navigate to `project settings -> CI/CD -> Pipeline triggers`
 1. Create a new trigger and make note of the token. Token is used to authenticate the REST calls to trigger the pipeline.
-![Gitlab Pipeline Triggers](/static/static/gitlab-pipeline-triggers.png)
+![Gitlab Pipeline Triggers](/assets/static/gitlab-pipeline-triggers.png)
 1. Also make note of the URL displayed in the same page that must be used to trigger the pipeline. For e.g. `https://git.xps.lan/api/v4/projects/14/trigger/pipeline`
 
 ## Trigger pipeline using `curl`

@@ -13,6 +13,7 @@ type ServerConfig struct {
 
 type Config struct {
 	MarkdownDir string       `json:"markdown_dir"`
+	AssetsDir   string       `json:"assets_dir"`
 	Server      ServerConfig `json:"server"`
 }
 
