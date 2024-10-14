@@ -7,13 +7,13 @@ import (
 )
 
 type ServerConfig struct {
-    Port int `json:"port"`
-    BindAddr string `json:"bind_address"`
+	Port     int    `json:"port"`
+	BindAddr string `json:"bind_address"`
 }
 
 type Config struct {
-	MarkdownDir string `json:"markdown_dir"`
-	Server ServerConfig `json:"server"`
+	MarkdownDir string       `json:"markdown_dir"`
+	Server      ServerConfig `json:"server"`
 }
 
 func (c *Config) read(cfg_path string) []byte {
