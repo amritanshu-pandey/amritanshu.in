@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Prometheus metric types"
 date: 2025-01-11T00:00:00+11:00
-draft: false
+draft: true
 categories: ['prometheus']
 tags: ['SRE', 'metrics', 'prometheus']
 ---
