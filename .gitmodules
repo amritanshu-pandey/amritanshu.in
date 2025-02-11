@@ -3,4 +3,4 @@
 	url = https://github.com/jbub/ghostwriter
 [submodule "goblog"]
 	path = goblog
-	url = git@github.com:amritanshu-pandey/amritanshu.in.git
+	url = git@github.com:amritanshu-pandey/goblog.git
